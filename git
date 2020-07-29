@@ -1,0 +1,99 @@
+git config --global user.name 名字
+
+git config --global user.email 邮件
+
+在当前目录新建一个.git目录
+git init
+
+将工作区修改部分添加到暂存区
+git add ./文件名
+
+将暂存区提交为一个版本
+git commit -m '信息'
+
+将工作区全部的修改(不包含新添加修改),提交为一个版本
+git commit -a -m '信息'
+
+释放工作区的修改
+git restore ./文件名
+
+释放暂存区的文件
+git restore --staged ./文件名
+
+查看版本
+git log
+
+查看单行模式的版本
+git log --pretty=oneline
+
+oneline short medium full fuller reference email raw
+
+    --since=日期 --after=日期
+    --until=日期 --before=日期
+    --author=作者
+    --grep-relog=正则表达式
+
+查看工作区状态
+git status
+
+.gitignore
+
+典型的golang项目的.gitignore
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.idea
+*.exe
+
+查看帮助
+git config
+
+列出当前配置
+git config --list
+
+查看具体配置
+git config --get 配置
+
+设置具体配置
+git config --get 配置 值
+
+配置作用域
+git config --system
+            --global
+            --local
+
+版本切换
+git reset 版本
+
+--hard --soft --mixed
+
+查看关联版本
+git reflog
+
+对于远程库
+先clone后pull
+
+对于本地库
+
+克隆远程库
+git clone 远程库地址
+
+git commit -a -m '消息'
+
+准备
+git remote add origin 远程库地址
+
+删除准备
+git remote rm origin
+
+推送本地库到远程库
+git push -u origin master
+
+强制推送本地库到远程库
+git push -f origin master
